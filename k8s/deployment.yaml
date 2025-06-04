@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-site-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-site
+  template:
+    metadata:
+      labels:
+        app: simple-site
+    spec:
+      containers:
+        - name: simple-site-container
+          image: ton-utilisateur-dockerhub/simple-site:latest
+          ports:
+            - containerPort: 80
