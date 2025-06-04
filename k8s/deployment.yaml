@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: simple-site-container
-          image: ton-utilisateur-dockerhub/simple-site:latest
+          image: oussamav/simple-site:latest
           ports:
             - containerPort: 80
